@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    scroll-behavior: smooth;
+}
+
+img{
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+}
+
+header{
+    background-color: lightpink ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+nav{
+    background-color: #502400; 
+    padding: 18px ;
+    text-align: center;
+    word-spacing: 40px;
+}
+
+.nav{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+a:hover{
+    color: lightpink;
+}
+
+section {
+    padding-top: 80px; /* Ajuste conforme a altura do menu fixo */
+    margin-top: -80px; /* Compensa o deslocamento */
+}
+
+.divisoria{
+    border: none; /* Remove borda padrão */
+    height: 2px; /* Altura da linha */
+    background-color: #ccc; /* Cor da linha */
+    margin: 20px 0; /* Espaçamento acima e abaixo */
+}
+
+.estudio{
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.texto {
+    flex: 1; /* Ocupa metade do espaço disponível */
+    padding-right: 20px; /* Adiciona espaçamento à direita */
+}
+
+.imagem {
+    flex: 1; /* Ocupa a outra metade do espaço */
+}
+
+.imagem img {
+    padding-top: 0%;
+    width: 70%; /* Faz a imagem ocupar toda a largura da div */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 50%;
+
+}
+
+/* Estilo para telas menores (celulares) */
+@media (max-width: 768px) {
+    .container {
+        display: block; /* Muda o layout para empilhar os elementos */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .imagem {
+        margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+    }
+
+    .texto {
+        padding-left: 0; /* Remove o espaçamento lateral */
+    }
+
+    .imagem img {
+        max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela */
+        height: auto; /* Mantém as proporções */
+    }
+}
+
+.separador{
+    margin-top: 2%;
+}
+
+.separador-conteudo{
+    margin-top: 1%;
+}
+
+/*#502400 cor marrom*/
+
+body{
+    
+    color: white;
+    background-color: #5e2b02;
+}
+
+main{
+    background-color: #502400;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    padding: 2%;
+    border-radius: 30px;
+    box-shadow: 1px 1px 10px pink;
+}
+
+p{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+@media(min-width: 320px) and (max-width: 1024px){
+    p{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    }
+}
+
+#grid-fotosServicos .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+#grid-fotosServicos .servico-item {
+    position: relative;
+    justify-content: center;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#grid-fotosServicos .servico-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+#grid-fotosServicos .servico-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+    transition: opacity 0.3s ease;
+}
+
+#grid-fotosServicos .servico-item .titulo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 2%;
+    color: #333;
+}
+
+#grid-fotosServicos .servico-item .descricao {
+    font-size: 12px;
+    color: #555;
+    margin-top: 5px;
+    margin-left: 2%;
+    line-height: 1.5;
+    opacity: 0; /* Inicialmente escondido */
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+#grid-fotosServicos .servico-item:hover .descricao {
+    opacity: 1;
+    max-height: 150px; /* Altura suficiente para mostrar o conteúdo */
+}
+
+#grid-fotosServicos .servico-item .btn-agendamento {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: lightpink;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0; /* Escondido inicialmente */
+    pointer-events: none; /* Desativa cliques */
+    transition: opacity 0.3s ease;
+}
+
+#grid-fotosServicos .servico-item:hover .btn-agendamento {
+    opacity: 1; /* Mostra ao passar o mouse */
+    pointer-events: auto; /* Ativa cliques */
+}
+
+.agendar {
+    padding: 8px 20px 8px 20px;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    transition: 0.4s ease;
+}
+
+.agendar:hover {
+    background: lightgreen;
+    color: black;
+}
+
+.buttonAgendar{
+    text-decoration: none;
+    color: white;
+}
+
+.buttonAgendar:hover {
+    background: lightgreen;
+    color: black;
+}
+
+footer{
+    font-weight: bold;
+    color: black;
+    display:block;
+    text-align: center;
+    background-color: lightpink;
+}
+
+.rodape{
+    color: black
+}
+
+.rodape:hover{
+    color: blue;
+}
+
+.voltarTopo{
+    padding: 8px 20px 8px 20px;
+    background-color: #502400;
+    color: white;
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    transition: 0.4s ease;
+    text-decoration: none;
+}
+
+.voltarTopo:hover {
+    background: rgb(97, 68, 68);
+    color: blue;
+}
